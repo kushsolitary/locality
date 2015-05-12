@@ -1,4 +1,3 @@
-Framer.Device.deviceType = "iphone-5s-gold"
 
 backgroundLayer = new BackgroundLayer
 	backgroundColor: '#fff'
@@ -8,82 +7,112 @@ Framer.Defaults.Animation = {
 }
 
 # This imports all the layers for "Configuration" into configurationLayers2
-s = Framer.Importer.load "imported/card"
+s = Framer.Importer.load "imported/location"
 
-flipCard = (front, back, perspective, flipCurve) ->
-	# Create a new container layer
-	perspectiveLayer = new Layer
-		width: front.width + 24
-		height: front.height + 100
-		backgroundColor: "transparent"
-	perspectiveLayer.perspective = perspective
-	perspectiveLayer.y = 55
+s.container.draggable.enabled = true
+s.container.draggable.speedY = 0
+s.region2.visible = true
+s.region2.opacity = 0
+s.location2.visible = true
+s.location2.opacity = 0
 
-	container = new Layer
-		width: front.width
-		height: front.height
-		backgroundColor: "transparent"
-		superLayer: perspectiveLayer
+s.north_tooltip.opacity = 0
 
-	front.x = 0;
-	front.y = 0;
-	back.x = 0;
-	back.y = 0;
+s.card2.on Events.Click, ->
+	s.container.animate
+		properties: {x: -920}
+	s.region1.animate
+		properties: {opacity: 0}
+	s.region2.animate
+		properties: {opacity: 1}
+	s.bottom_bar.animate
+		properties: {x: -0}
 
-	s.keyboardFront.states.add
-		front: {visible: true}
-		back: {visible: false}
+	s.north_tooltip.animate
+		properties: {opacity: 0}
+	s.east_tooltip.animate
+		properties: {opacity: 1}
 
-	# Center the container
-	container.center()
+	s.location1.animate
+		properties: {opacity: 1}
+	s.location2.animate
+		properties: {opacity: 0}
 
-	#Set superLayer for both front and back layers
-	back.superLayer = container
-	front.superLayer = container
+s.card3.on Events.Click, ->
+	s.container.animate
+		properties: {x: -1840}
+	s.region1.animate
+		properties: {opacity: 0}
+	s.region2.animate
+		properties: {opacity: 1}
+	s.bottom_bar.animate
+		properties: {x: -600}
 
-	# Rotate the back image on intial
-	back.rotationY = 180
+	s.location1.animate
+		properties: {opacity: 0}
+	s.location2.animate
+		properties: {opacity: 1}
 
-	#######################
-	# States
-	#######################
-	front.states.add
-		front: {opacity: 1}
-		back: {opacity: 0}
-	front.states.animationOptions =
-		curve: flipCurve
-	front.states.switchInstant("front")
+	s.north_tooltip.animate
+		properties: {opacity: 1}
+	s.east_tooltip.animate
+		properties: {opacity: 0}
 
-	back.states.add
-		front: {opacity: 0}
-		back: {opacity: 1}
-	back.states.animationOptions =
-		curve: flipCurve
+s.card1.on Events.Click, ->
+	s.container.animate
+		properties: {x: 0}
+	s.region1.animate
+		properties: {opacity: 1}
+	s.region2.animate
+		properties: {opacity: 0}
+	s.bottom_bar.animate
+		properties: {x: -0}
 
-	container.states.add
-		front: {rotationY: 0}
-		back: {rotationY: 180}
-	container.states.animationOptions =
-		curve: flipCurve
+	s.north_tooltip.animate
+		properties: {opacity: 0}
+	s.east_tooltip.animate
+		properties: {opacity: 1}
 
-	s.button.states.add
-		front: {rotationY: 0}
-		back: {rotationY: 180}
+	s.location1.animate
+		properties: {opacity: 1}
+	s.location2.animate
+		properties: {opacity: 0}
 
-	s.button.states.animationOptions =
-		curve: flipCurve
 
-	container.states.switchInstant("front")
-	container.on Events.Click, ->
-		this.states.next(["back","front"])
-		s.button.states.next(["back","front"])
-		s.keyboardFront.states.next(["back","front"])
-		front.states.next(["back","front"])
+s.east.on Events.Click, ->
+	s.container.animate
+		properties: {x: -1840}
+	s.bottom_bar.animate
+		properties: {x: -600}
 
-	s.button.on Events.Click, ->
-		this.states.next(["back","front"])
-		container.states.next(["back","front"])
-		s.keyboardFront.states.next(["back","front"])
-		front.states.next(["back","front"])
+	s.location1.animate
+		properties: {opacity: 0}
+	s.location2.animate
+		properties: {opacity: 1}
 
-flipCard(s.front, s.back, 1600, "spring(300,20,0)")
+	s.north_tooltip.animate
+		properties: {opacity: 1}
+	s.east_tooltip.animate
+		properties: {opacity: 0}
+
+s.north.on Events.Click, ->
+	s.container.animate
+		properties: {x: -0}
+	s.bottom_bar.animate
+		properties: {x: -0}
+
+	s.region1.animate
+		properties: {opacity: 1}
+	s.region2.animate
+		properties: {opacity: 0}
+
+	s.north_tooltip.animate
+		properties: {opacity: 0}
+	s.east_tooltip.animate
+		properties: {opacity: 1}
+
+	s.location1.animate
+		properties: {opacity: 1}
+	s.location2.animate
+		properties: {opacity: 0}
+
