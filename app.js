@@ -1,3 +1,5 @@
+myLayers = Framer.Importer.load("imported/location")
+
 myLayers = Framer.Importer.load("imported/card")
 
 myLayers = Framer.Importer.load("imported/city")
