@@ -18,7 +18,27 @@ s.location2.opacity = 0
 
 s.north_tooltip.opacity = 0
 
-s.card2.on Events.Click, ->
+gotoFirstReg = ->
+		s.container.animate
+			properties: {x: 0}
+		s.region1.animate
+			properties: {opacity: 1}
+		s.region2.animate
+			properties: {opacity: 0}
+		s.bottom_bar.animate
+			properties: {x: -0}
+
+		s.north_tooltip.animate
+			properties: {opacity: 0}
+		s.east_tooltip.animate
+			properties: {opacity: 1}
+
+		s.location1.animate
+			properties: {opacity: 1}
+		s.location2.animate
+			properties: {opacity: 0}
+
+gotoSecondReg = ->
 	s.container.animate
 		properties: {x: -920}
 	s.region1.animate
@@ -38,7 +58,7 @@ s.card2.on Events.Click, ->
 	s.location2.animate
 		properties: {opacity: 0}
 
-s.card3.on Events.Click, ->
+gotoThirdReg = ->
 	s.container.animate
 		properties: {x: -1840}
 	s.region1.animate
@@ -58,61 +78,18 @@ s.card3.on Events.Click, ->
 	s.east_tooltip.animate
 		properties: {opacity: 0}
 
-s.card1.on Events.Click, ->
-	s.container.animate
-		properties: {x: 0}
-	s.region1.animate
-		properties: {opacity: 1}
-	s.region2.animate
-		properties: {opacity: 0}
-	s.bottom_bar.animate
-		properties: {x: -0}
 
-	s.north_tooltip.animate
-		properties: {opacity: 0}
-	s.east_tooltip.animate
-		properties: {opacity: 1}
+s.card2.on Events.TouchEnd, ->
+	gotoSecondReg()
 
-	s.location1.animate
-		properties: {opacity: 1}
-	s.location2.animate
-		properties: {opacity: 0}
+s.card3.on Events.TouchEnd, ->
+	gotoThirdReg()
 
+s.card1.on Events.TouchEnd, ->
+	gotoFirstReg()
 
-s.east.on Events.Click, ->
-	s.container.animate
-		properties: {x: -1840}
-	s.bottom_bar.animate
-		properties: {x: -600}
+s.east.on Events.TouchEnd, ->
+	gotoThirdReg()
 
-	s.location1.animate
-		properties: {opacity: 0}
-	s.location2.animate
-		properties: {opacity: 1}
-
-	s.north_tooltip.animate
-		properties: {opacity: 1}
-	s.east_tooltip.animate
-		properties: {opacity: 0}
-
-s.north.on Events.Click, ->
-	s.container.animate
-		properties: {x: -0}
-	s.bottom_bar.animate
-		properties: {x: -0}
-
-	s.region1.animate
-		properties: {opacity: 1}
-	s.region2.animate
-		properties: {opacity: 0}
-
-	s.north_tooltip.animate
-		properties: {opacity: 0}
-	s.east_tooltip.animate
-		properties: {opacity: 1}
-
-	s.location1.animate
-		properties: {opacity: 1}
-	s.location2.animate
-		properties: {opacity: 0}
-
+s.north.on Events.TouchEnd, ->
+	gotoFirstReg()
