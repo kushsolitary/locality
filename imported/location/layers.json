@@ -366,18 +366,18 @@
     "image" : {
       "path" : "images\/Layer-bottom_bar-CFDD6E86-7781-4083-8347-64192A23BE7E.png",
       "frame" : {
-        "y" : 1773,
+        "y" : 1762,
         "x" : -8,
         "width" : 2297,
-        "height" : 153
+        "height" : 165
       }
     },
     "imageType" : "png",
     "layerFrame" : {
-      "y" : 1773,
+      "y" : 1762,
       "x" : -8,
       "width" : 2297,
-      "height" : 153
+      "height" : 165
     },
     "name" : "bottom_bar"
   },
@@ -540,7 +540,7 @@
             "image" : {
               "path" : "images\/Layer-Group-60A83732-F430-4A55-A2F1-4591368A5615.png",
               "frame" : {
-                "y" : 1522,
+                "y" : 1483,
                 "x" : 1985,
                 "width" : 734,
                 "height" : 130
@@ -548,7 +548,7 @@
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 1522,
+              "y" : 1483,
               "x" : 1985,
               "width" : 734,
               "height" : 130
@@ -565,7 +565,7 @@
             "image" : {
               "path" : "images\/Layer-arrow_forward_copy-27C4BD21-9D84-4547-89A9-583CF99B717E.png",
               "frame" : {
-                "y" : 1714,
+                "y" : 1675,
                 "x" : 1984,
                 "width" : 40,
                 "height" : 40
@@ -573,7 +573,7 @@
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 1714,
+              "y" : 1675,
               "x" : 1984,
               "width" : 40,
               "height" : 40
@@ -584,7 +584,7 @@
         "image" : {
           "path" : "images\/Layer-card3-390E4E8B-AC63-496A-8097-4519A9839119.png",
           "frame" : {
-            "y" : 1309,
+            "y" : 1270,
             "x" : 1918,
             "width" : 880,
             "height" : 487
@@ -592,7 +592,7 @@
         },
         "imageType" : "png",
         "layerFrame" : {
-          "y" : 1309,
+          "y" : 1270,
           "x" : 1918,
           "width" : 880,
           "height" : 487
@@ -614,7 +614,7 @@
             "image" : {
               "path" : "images\/Layer-Group-DCE229AF-0F30-4236-919F-16AEAEE9E537.png",
               "frame" : {
-                "y" : 1522,
+                "y" : 1483,
                 "x" : 1076,
                 "width" : 734,
                 "height" : 130
@@ -622,7 +622,7 @@
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 1522,
+              "y" : 1483,
               "x" : 1076,
               "width" : 734,
               "height" : 130
@@ -639,7 +639,7 @@
             "image" : {
               "path" : "images\/Layer-arrow_forward_copy-7159D210-8BD1-4112-BC56-E0DFC3006058.png",
               "frame" : {
-                "y" : 1714,
+                "y" : 1675,
                 "x" : 1075,
                 "width" : 40,
                 "height" : 40
@@ -647,7 +647,7 @@
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 1714,
+              "y" : 1675,
               "x" : 1075,
               "width" : 40,
               "height" : 40
@@ -658,7 +658,7 @@
         "image" : {
           "path" : "images\/Layer-card2-C8674362-D480-452B-8504-4FEC892084E0.png",
           "frame" : {
-            "y" : 1309,
+            "y" : 1270,
             "x" : 1009,
             "width" : 880,
             "height" : 487
@@ -666,7 +666,7 @@
         },
         "imageType" : "png",
         "layerFrame" : {
-          "y" : 1309,
+          "y" : 1270,
           "x" : 1009,
           "width" : 880,
           "height" : 487
@@ -688,7 +688,7 @@
             "image" : {
               "path" : "images\/Layer-Group-24202C63-ABFD-4D35-A133-D1E9F64A4F58.png",
               "frame" : {
-                "y" : 1522,
+                "y" : 1483,
                 "x" : 167,
                 "width" : 734,
                 "height" : 130
@@ -696,7 +696,7 @@
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 1522,
+              "y" : 1483,
               "x" : 167,
               "width" : 734,
               "height" : 130
@@ -713,7 +713,7 @@
             "image" : {
               "path" : "images\/Layer-arrow_forward_copy-2BCA3173-9230-4FF7-A82C-6AC4AD22F316.png",
               "frame" : {
-                "y" : 1714,
+                "y" : 1675,
                 "x" : 166,
                 "width" : 40,
                 "height" : 40
@@ -721,7 +721,7 @@
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 1714,
+              "y" : 1675,
               "x" : 166,
               "width" : 40,
               "height" : 40
@@ -732,7 +732,7 @@
         "image" : {
           "path" : "images\/Layer-card1-E817B2EA-71D5-4E94-9248-0AAF0E5310FD.png",
           "frame" : {
-            "y" : 1309,
+            "y" : 1270,
             "x" : 100,
             "width" : 880,
             "height" : 487
@@ -740,7 +740,7 @@
         },
         "imageType" : "png",
         "layerFrame" : {
-          "y" : 1309,
+          "y" : 1270,
           "x" : 100,
           "width" : 880,
           "height" : 487
@@ -751,17 +751,17 @@
     "image" : {
       "path" : "images\/Layer-container-1B3E08B6-5C25-4D70-AC1B-A4AB56F5CB6F.png",
       "frame" : {
-        "y" : 1309,
-        "x" : 0,
-        "width" : 2882,
+        "y" : 1270,
+        "x" : 100,
+        "width" : 2698,
         "height" : 487
       }
     },
     "imageType" : "png",
     "layerFrame" : {
-      "y" : 1309,
-      "x" : 0,
-      "width" : 2882,
+      "y" : 1270,
+      "x" : 100,
+      "width" : 2698,
       "height" : 487
     },
     "name" : "container"
