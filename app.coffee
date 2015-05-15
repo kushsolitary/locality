@@ -24,7 +24,7 @@ s.north_tooltip.opacity = 0
 
 gotoFirstReg = ->
 	s.container.animate
-		properties: {x: 0}
+		properties: {x: 100}
 	s.region1.animate
 		properties: {opacity: 1}
 	s.region2.animate
@@ -44,7 +44,7 @@ gotoFirstReg = ->
 
 gotoSecondReg = ->
 	s.container.animate
-		properties: {x: -920}
+		properties: {x: -810}
 	s.region1.animate
 		properties: {opacity: 0}
 	s.region2.animate
@@ -64,7 +64,7 @@ gotoSecondReg = ->
 
 gotoThirdReg = ->
 	s.container.animate
-		properties: {x: -1840}
+		properties: {x: -1740}
 	s.region1.animate
 		properties: {opacity: 0}
 	s.region2.animate
@@ -122,4 +122,12 @@ s.container.on Events.DragEnd, (layer, e) ->
 		gotoSecondReg()
 
 	if s.container.x <= -1350
+		gotoThirdReg()
+
+s.bottom_bar.on Events.DragEnd, (layer, e) ->
+	isTouched = false
+	if s.bottom_bar.x >= -492
+		gotoFirstReg()
+
+	if s.bottom_bar.x < -492
 		gotoThirdReg()
